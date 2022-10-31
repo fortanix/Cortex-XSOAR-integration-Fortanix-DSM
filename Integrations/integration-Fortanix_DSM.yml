@@ -1,0 +1,850 @@
+commonfields:
+  id: Fortanix DSM
+  version: -1
+vcShouldKeepItemLegacyProdMachine: false
+name: Fortanix DSM
+display: Fortanix DSM
+category: Authentication
+image: data:image/png;base64,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
+description: Manage Secrets and Protect Confidential Data using Fortanix Data Security Manager
+detaileddescription: |
+  ## Fortanix Data Security Manager
+
+  ### Authentication
+  The integration supports the following auth methods:
+
+  #### Username/password or Client Certificate Auth Method
+  These fields accept  the *Username*  and *Password* parameters for a user or App. These credentials may also be used for mutual-TLS using a client key and certificate. The may be signed by a Trusted CA if Fortanix DSM is configured accordingly.
+
+  #### API KEY Auth Method
+  An easy and quick way to test the integration is to specify the *Basic Authentication token* parameter from the Fortanix DSM App's API KEY.
+
+  ### Playground Commands
+  The integration supports the following commands for execution:
+
+  #### fortanix-test
+  - Checks the connection with the Fortanix DSM server based on the instance settings.
+  - !fortanix-test
+
+  #### fortanix-list-secrets
+  - Lists all secrets from the Fortanix DSM App's member groups or a specified group, if any.
+  - !fortanix-list-secrets
+  - !fortanix-list-secrets group_id=aedc4bd0-2880-4191-8f38-043fce5ee97
+
+  #### fortanix-get-secret-metadata
+  - Get secret metadata based on its name or UUID, as specified.
+  - !fortanix-get-secret-metadata name="Test Secret"
+  - !fortanix-get-secret-metadata kid=09299af7-0d69-4091-9dc7-27d426667847
+
+  #### fortanix-fetch-secret
+  - Retrieve secret's confidential value based on a UUID.
+  - !fortanix-fetch-secret kid=4bd14880-522d-4c34-8560-617e0fb6485b
+
+  #### fortanix-new-secret
+  - Import a new secret along with its confidential value, into the Fortanix DSM App's default or a specified group, if any.
+  - !fortanix-new-secret value="Top Secret !3$8" name=metasec metadata="key1=value1, key2=meta2,key3=\"whats that\",key 4=nothin new" group_id=07f85883-adaf-4a6c-a040-ffed46dfd349
+
+  #### fortanix-rotate-secret
+  - Update an existing secret's confidential value by rotating out of it and obtaining a new UUID.
+  - !fortanix-rotate-secret value="Fib0nac!I !3$8" name=metasec metadata="key1=value01,key2=meta2a,key3=\"whats that\",key 4=nothin new" group_id=07f85883-adaf-4a6c-a040-ffed46dfd349
+
+  #### fortanix-delete-secret
+  - Delete an existing secret. This may be revocable if there is a Key Undo policy applied on the group.
+  - !fortanix-delete-secret kid=30d7286a-ad4c-4cb3-8bb1-0f9265e0adfc
+
+  #### fortanix-invoke-plugin
+  - Execute Lua code through a Fortanix Plugin running on Fortanix DSM using Confidential Computing. Requires the plugin UUID and an arbitrary user input, based on the plugin's functionality.
+  - !fortanix-invoke-plugin pid=3599796b-7b18-49c3-aad8-9758af24fbf9
+  - !fortanix-invoke-plugin pid=3599796b-7b18-49c3-aad8-9758af24fbf9 input="Hello World Oct 29"
+  - !fortanix-invoke-plugin pid=c6a5351e-d516-4099-b5c9-be00c6967a53 input=ewogICJjYV9rZXkiOiAiU1NIQ0EtUHJpdmF0ZS1LZXktRWQyNTUxOSIsCiAgInB1YmtleSI6ICJBQUFBRTJWalpITmhMWE5vWVRJdGJtbHpkSEF5TlRZQUFBQUlibWx6ZEhBeU5UWUFBQUJCQkt0R3dTeFhWdU4zbXFkaE9YNXozVjBNT243MkRJNWNQQThzSXBTemJSVjZnNTNRYW0yVzNNaW1JdlNaazkxL2x4aFNXRE82RmUxQXVqYy9VQ2VCc3lNPSIsCiAgImNlcnRfbGlmZXRpbWUiOiAzNjAwLAogICJ2YWxpZF9wcmluY2lwYWxzIjogInVidW50dSIsCiAgImNlcnRfdHlwZSI6ICJ1c2VyIiwKICAiY3JpdGljYWxfZXh0ZW5zaW9ucyI6IHt9LAogICJleHRlbnNpb25zIjogewogICAgInBlcm1pdC1wdHkiOiAiIgogIH0KfQo=
+  - !fortanix-invoke-plugin pid=3599796b-7b18-49c3-aad8-9758af24fbf9 input="{\"iv\":\"DaRIkBoCaAPqpGSczBeVGQ==\",\"kid\":\"3451bf0b-1728-4b9a-9859-f1c6bd0d8652\",\"op\":\"decrypt\",\"cipher\":\"ZmHxqmbgYGAtauvCnco7EA==\"}"
+
+  #### fortanix-encrypt
+  - Protect sensitive information or data using a Fortanix DSM key with default cryptographic parameters
+  - !fortanix-encrypt data="Hello World 123"
+
+  #### fortanix-decrypt
+  - Reveal sensitive information or data using a Fortanix DSM key with default cryptographic parameters
+  - !fortanix-decrypt cipher=eyJraWQiOiAiY2E5ZTJiMGYtNzFjNC00ZjNiLWJhYTYtNGM1YWY5YTM5N2YwIiwgImNpcGhlciI6ICJqcGxqVUk2S2tIb3drbHhhdG1MWXVBPT0iLCAiaXYiOiAidDFJczFWUTR3TlRFOThLZHR2aUlWZz09IiwgIm1vZGUiOiAiQ0JDIn0=
+  - !fortanix-decrypt cipher=u2KMcAUF1jsifJfh99uWqw== iv=r7HeHduHSZ1IrCC6s7MG0w==
+  - !fortanix-decrypt kid=ca9e2b0f-71c4-4f3b-baa6-4c5af9a397f0 cipher=u2KMcAUF1jsifJfh99uWqw== iv=r7HeHduHSZ1IrCC6s7MG0w==
+configuration:
+- display: Fortanix DSM server endpoint (e.g., https://amer.smartkey.io)
+  name: server
+  defaultvalue: https://sdkms.fortanix.com
+  type: 0
+  required: true
+- display: Username / App UUID / Certificate
+  displaypassword: Password / App Secret / Private Key
+  name: credentials
+  type: 9
+  required: false
+- display: API Key
+  name: token
+  type: 4
+  required: false
+- display: Trust any server certificate (insecure)
+  name: tls_enforce
+  defaultvalue: "true"
+  type: 8
+  required: false
+- display: Use system proxy settings
+  name: proxy
+  defaultvalue: "false"
+  type: 8
+  required: false
+- display: Group UUID to list secrets from (optional)
+  name: group_ids
+  type: 0
+  required: false
+- display: Data protection key used for encryption and decryption
+  name: protection_key
+  type: 0
+  required: false
+  additionalinfo: Also configure the Mode
+- display: Encryption and decryption mode
+  name: protection_mode
+  type: 15
+  required: false
+  options:
+  - FPE
+  - GCM
+  - CBC
+  - None
+script:
+  script: |-
+    register_module_line('Fortanix DSM', 'start', __line__())
+    import json
+    import requests
+    import tempfile
+    from base64 import b64encode, b64decode
+
+
+    ''' HELPER FUNCTIONS '''
+
+
+    def isBase64(sb):
+        try:
+            if isinstance(sb, str):
+                sb_bytes = bytes(sb, 'ascii')
+            elif isinstance(sb, bytes):
+                sb_bytes = sb
+            else:
+                raise ValueError("Argument must be string or bytes")
+            return base64.b64encode(base64.b64decode(sb_bytes)) == sb_bytes
+        except Exception:
+            return False
+
+
+    def isJSON(sb):
+        try:
+            if json.loads(sb):
+                return True
+        except Exception:
+            return False
+
+
+    def get_server_url():
+        url = demisto.params()['server']
+        url = re.sub('/[\/]+$/', '', url)  # guardrails-disable-line
+        url = re.sub('\/$', '', url)  # guardrails-disable-line
+        return url
+
+
+    def getMetadata(strMeta):
+        metadata = {}
+        try:
+            if strMeta:
+                if isJSON(strMeta):
+                    metadata = json.loads(strMeta)
+        except Exception:
+            LOG('Metadata is null')
+        if metadata is None or len(metadata) == 0:
+            raw_meta = strMeta.strip().split(',')
+            for attr in raw_meta:
+                k_v = attr.strip().split('=')
+                metadata[k_v[0]] = k_v[1]
+        return metadata
+
+
+    def get_headers():
+        headers = {'Content-Type': 'application/json'}
+
+        if BEARER:
+            headers['Authorization'] = 'Bearer ' + BEARER
+        if USERNAME and PASSWORD:
+            if USERNAME.find('CERTIFICATE') < 0 and PASSWORD.find('PRIVATE KEY') < 0:
+                headers['Authorization'] = 'Basic ' + \
+                    b64encode(b":".join([USERNAME.encode("latin1"),
+                                         PASSWORD.encode("latin1")])).decode('ascii')
+        elif TOKEN:
+            headers['Authorization'] = 'Basic ' + TOKEN
+
+        return headers
+
+
+    def get_client_cert():
+        if USERNAME.find('CERTIFICATE') > 0 and PASSWORD.find('PRIVATE KEY') > 0:
+            fBundle = tempfile.NamedTemporaryFile(delete=False)
+            fName = fBundle.name
+            fBundle.write(bytes(USERNAME.replace('\\n', '\n'), 'ascii'))
+            fBundle.write(bytes(PASSWORD.replace('\\n', '\n'), 'ascii'))
+            fBundle.seek(0)
+            fBundle.flush()
+            fBundle.close()
+            return (fName)
+        else:
+            return None
+
+
+    def login():
+        path = 'sys/v1/session/auth'
+        url = '{}/{}'.format(SERVER_URL, path)
+
+        res = requests.request('POST', url, headers=get_headers(), cert=get_client_cert(), verify=VERIFY_SSL)
+
+        if (res.status_code < 200 or res.status_code >= 300) and res.status_code not in DEFAULT_STATUS_CODES:
+            try:
+                error_body = res.json()
+                if 'errors' in error_body and isinstance(error_body['errors'], list):
+                    error_body = ';'.join(error_body['errors']) if len(error_body['errors']) > 0 else 'None'
+            except Exception as ex:
+                demisto.error("Error in login: {}".format(ex))
+                error_body = res.content
+
+            return_error('Login failed with: {}, Error: {}'.format(str(res.status_code), error_body))
+
+        auth_res = res.json()
+        if not auth_res or 'expires_in' not in auth_res or 'access_token' not in auth_res:
+            return_error('Could not authenticate user')
+
+        return auth_res['access_token']
+
+
+    def send_request(path, method='get', body=None, params=None, headers=None):
+
+        data = json.dumps(body) if body is not None else None
+        params = params if params is not None else {}
+        headers = headers if headers is not None else get_headers()
+
+        url = '{}/{}'.format(SERVER_URL, path)
+
+        res = requests.request(method, url, headers=headers, cert=get_client_cert(), data=data, params=params, verify=VERIFY_SSL)
+
+        if res.status_code < 200 or res.status_code >= 300:
+            try:
+                error_body = res.json()
+                if 'errors' in error_body and isinstance(error_body['errors'], list):
+                    error_body = ';'.join(error_body['errors']) if len(error_body['errors']) > 0 else 'None'
+            except Exception as ex:
+                demisto.error("Error in send_request (parsing error msg): {}".format(ex))
+                error_body = res.content
+
+            return_error('Request failed. Status code: {}, details: {}'.format(str(res.status_code), error_body))
+
+        if res.content:
+            return res.json()
+        return ''
+
+
+    ''' COMMAND FUNCTIONS '''
+
+
+    def test_command(cmd):
+        path = 'sys/v1/health'
+        if cmd == 'fortanix-test':
+            path = 'sys/v1/version'
+        res = send_request(path)
+        if cmd == 'fortanix-test':
+            readable_output = tableToMarkdown(f'Fortanix DSM status', res)
+            return CommandResults(
+                outputs_prefix='Fortanix.DSM',
+                readable_output=readable_output,
+                outputs=res
+            )
+        else:
+            demisto.results('ok')
+
+
+    def list_secrets_command():
+        group_id = demisto.args()['group_id'] if 'group_id' in demisto.args() else None
+        name = demisto.args()['name'] if 'name' in demisto.args() else None
+        kid = demisto.args()['kid'] if 'kid' in demisto.args() else None
+        state = demisto.args()['state'] if 'state' in demisto.args() else None
+        page = int(demisto.args()['page']) if 'page' in demisto.args() else None
+
+        path = 'crypto/v1/keys'
+        params = {
+            'obj_type': 'SECRET',
+            'sort': 'name:asc'
+        }
+        if state:
+            if state == 'enabled':
+                state = True
+            if state == 'disabled':
+                state = False
+            elif state == 'deleted':
+                params['show_deleted'] = 'true'
+            elif state == 'destroyed':
+                params['show_destroyed'] = 'true'
+
+        if page and page > 1:
+            params['offset'] = (page-1)*100+1
+        if kid:
+            path = path + '/' + kid
+        elif name:
+            params['name'] = name
+        else:
+            if group_id:
+                params['group_id'] = group_id
+            elif GROUP_IDS and len(GROUP_IDS) and GROUP_IDS.find(' ') < 0 and GROUP_IDS.find(',') < 0:
+                params['group_id'] = GROUP_IDS
+
+        res = send_request(path, 'get', params=params)
+        if not res:
+            return_error('Secrets not found')
+
+        if kid and res:
+            readable_output = tableToMarkdown(f'Fortanix DSM Secret', res)
+            return CommandResults(
+                outputs_prefix='Fortanix.Secret',
+                readable_output=readable_output,
+                outputs=res
+            )
+        elif len(res) == 1:
+            readable_output = tableToMarkdown(f'Fortanix DSM Secret', res[0])
+            return CommandResults(
+                outputs_prefix='Fortanix.Secret',
+                readable_output=readable_output,
+                outputs=res[0]
+            )
+        else:
+            mapped_secrets = [{
+                'Name': secret['name'],
+                'ID': secret['kid'],
+                'Group': secret['group_id']
+            } for secret in res if state == None or (state == secret['state'].lower() or state == secret['enabled']) ]
+
+            readable_output = tableToMarkdown(f'Found {len(mapped_secrets)} Fortanix DSM Secrets', mapped_secrets)
+            return CommandResults(
+                outputs_prefix='Fortanix.Secret',
+                outputs_key_field='Kid',
+                readable_output=readable_output,
+                outputs=mapped_secrets
+            )
+
+
+    def fetch_secret_command():
+
+        if 'kid' in demisto.args():
+            kid = demisto.args()['kid']
+        else:
+            return_error('Secret cannot be fetched without a key ID')
+
+        path = 'crypto/v1/keys/export'
+        body = {
+            'kid': kid
+        }
+
+        res = send_request(path, "post", body)
+        value = ''
+        if not res:
+            raise ValueError('Secret cannot be fetched.')
+        else:
+            try:
+                if 'value' in res:
+                    if isBase64(res['value']):
+                        value = b64decode(res['value']).decode("utf-8")
+                    else:
+                        value = res['value']
+                else:
+                    value = res
+            except Exception:
+                value = res['value']
+
+        mapped_value = [{
+            'Value': value
+        }]
+        readable_output = tableToMarkdown(f'Fortanix DSM Secret', mapped_value)
+        return CommandResults(
+            outputs_prefix='Fortanix.Secret.Value',
+            readable_output=readable_output,
+            outputs=mapped_value
+        )
+
+
+
+    def import_secret_command(rotate=False):
+
+        path = 'crypto/v1/keys'
+        method = 'put'
+        if rotate:
+            path = path + '/rekey'
+            method = 'post'
+
+        group_id = demisto.args()['group_id'] if 'group_id' in demisto.args() else None
+        body = {
+            'name': demisto.args()['name'],
+            'value': b64encode(demisto.args()['value'].encode("utf-8")).decode('ascii'),
+            'obj_type': 'SECRET',
+            'key_ops': ['EXPORT', 'APPMANAGEABLE']
+        }
+        if group_id:
+            body['group_id'] = group_id
+        elif GROUP_IDS and len(GROUP_IDS) and GROUP_IDS.find(' ') < 0 and GROUP_IDS.find(',') < 0:
+            body['group_id'] = GROUP_IDS
+
+        metadata = getMetadata(demisto.args()['metadata']) \
+            if 'metadata' in demisto.args() else None
+        if metadata:
+            body['custom_metadata'] = metadata
+
+        res = send_request(path, method, body)
+        if not res:
+            msg = 'Secret cannot be '
+            msg = msg + 'created.' if rotate else msg + 'rotated.'
+            raise ValueError(msg)
+
+        readable_output = tableToMarkdown(f'Fortanix DSM Secret', res)
+        return CommandResults(
+            outputs_prefix='Fortanix.Secret',
+            readable_output=readable_output,
+            outputs=res
+        )
+
+
+    def delete_secret_command():
+
+        if 'kid' in demisto.args():
+            kid = demisto.args()['kid']
+        else:
+            return_error('Secret cannot be deleted without a key ID')
+
+        path = 'crypto/v1/keys/' + kid
+        res = send_request(path, "delete")
+        if res:
+            raise ValueError('Secret was not deleted.')
+
+        mapped_value = [{
+            'Result': 'OK'
+        }]
+        readable_output = tableToMarkdown(f'Fortanix DSM Secret', mapped_value)
+        return CommandResults(
+            outputs_prefix='Fortanix.Secret.Result',
+            readable_output=readable_output,
+            outputs=mapped_value
+        )
+
+
+    def invoke_plugin_command():
+
+        if 'pid' in demisto.args():
+            pid = demisto.args()['pid']
+        else:
+            raise ValueError('Plugin cannot be invoked without a Plugin UUID')
+
+        plugin_input = '{}'
+        if 'input' in demisto.args():
+            args_input = demisto.args()['input']
+            try:
+                if isBase64(args_input):
+                    plugin_input = json.loads(b64decode(args_input))
+                elif isJSON(args_input):
+                    plugin_input = json.loads(args_input)
+                else:
+                    plugin_input = args_input
+            except Exception:
+                plugin_input = args_input
+
+        # return_results(plugin_input)
+        path = 'sys/v1/plugins/' + pid
+        res = send_request(path, "post", plugin_input)
+        value = ''
+        if res and isinstance(res, dict):
+            value = res
+        elif res:
+            value = [{
+                'Output': res
+            }]
+        else:
+            value = [{
+                'Output': 'OK'
+            }]
+
+        readable_output = tableToMarkdown(f'Fortanix DSM Plugin', value)
+        return CommandResults(
+            outputs_prefix='Fortanix.Plugin.Output',
+            readable_output=readable_output,
+            outputs=value
+        )
+
+
+
+    def encrypt_command():
+
+        if 'data' in demisto.args():
+            data = demisto.args()['data']
+        else:
+            return_error('Protection requires data')
+
+        key_name = PROTECTION_KEY
+        if 'key' in demisto.args():
+            key_name = demisto.args()['key']
+
+        mode = PROTECTION_MODE
+        if 'mode' in demisto.args():
+            mode = demisto.args()['mode']
+
+        path = 'crypto/v1/encrypt'
+        body = {
+            'key': {"name": key_name},
+            'plain': b64encode(bytes(data, encoding="raw_unicode_escape")).decode('ascii'),
+            'alg': 'AES',
+            'mode': mode
+        }
+        res = send_request(path, "post", body)
+        value = ''
+        try:
+            if 'cipher' in res:
+                res['mode'] = mode
+                value = b64encode(json.dumps(res).encode('ascii')).decode('ascii')
+            else:
+                value = res
+        except Exception:
+            value = res
+
+        mapped_value = [{
+            'Cipher': value
+        }]
+        readable_output = tableToMarkdown(f'Fortanix DSM Encryption', mapped_value)
+        return CommandResults(
+            outputs_prefix='Fortanix.Data.Cipher',
+            readable_output=readable_output,
+            outputs=mapped_value
+        )
+
+
+
+    def decrypt_command():
+
+        payload_cipher = None
+        if 'cipher' in demisto.args():
+            raw_cipher = demisto.args()['cipher']
+            try:
+                if isBase64(raw_cipher):
+                    payload_cipher = json.loads(b64decode(raw_cipher))
+                elif isJSON(raw_cipher):
+                    payload_cipher = json.loads(raw_cipher)
+                else:
+                    payload_cipher = raw_cipher
+            except Exception:
+                payload_cipher = raw_cipher
+        else:
+            raise ValueError('Protection requires cipher')
+
+        cipher = None
+        key_name = None
+        key_id = None
+        iv = None
+        mode = None
+        if isinstance(payload_cipher, dict):
+            if 'kid' in payload_cipher:
+                key_id = payload_cipher['kid']
+            if 'iv' in payload_cipher:
+                iv = payload_cipher['iv']
+            if 'mode' in payload_cipher:
+                mode = payload_cipher['mode']
+            cipher = payload_cipher['cipher']
+        else:
+            cipher = payload_cipher
+
+        if not iv and 'iv' in demisto.args():
+            iv = demisto.args()['iv']
+
+        if not key_id:
+            key_name = PROTECTION_KEY
+            key_id = None
+            if 'key' in demisto.args():
+                key_id = demisto.args()['key']
+
+        if not mode:
+            mode = PROTECTION_MODE
+            if 'mode' in demisto.args():
+                mode = demisto.args()['mode']
+
+        path = 'crypto/v1/decrypt'
+        body = {
+            'cipher': cipher,
+            'alg': 'AES',
+            'mode': mode,
+            'key': {}
+        }
+        if key_name:
+            body['key']['name'] = key_name
+        else:
+            body['key']['kid'] = key_id
+        if iv:
+            body['iv'] = iv
+
+        res = send_request(path, "post", body)
+        value = ''
+        try:
+            if 'plain' in res:
+                if isBase64(res['plain']):
+                    value = b64decode(res['plain']).decode("utf-8")
+                else:
+                    value = res['plain']
+            else:
+                value = res
+        except Exception:
+            value = res['plain']
+
+        mapped_value = [{
+            'Plain': value
+        }]
+        readable_output = tableToMarkdown(f'Fortanix DSM Decryption', mapped_value)
+        return CommandResults(
+            outputs_prefix='Fortanix.Data.Plain',
+            readable_output=readable_output,
+            outputs=mapped_value
+        )
+
+
+    ''' GLOBAL VARIABLES '''
+
+
+    # Disable insecure warnings
+    requests.packages.urllib3.disable_warnings()
+
+    if not demisto.params().get('proxy', False):
+        del os.environ['HTTP_PROXY']
+        del os.environ['HTTPS_PROXY']
+        del os.environ['http_proxy']
+        del os.environ['https_proxy']
+
+
+    USERNAME = None
+    PASSWORD = None
+    CREDENTIALS = demisto.params().get('credentials', {})
+    if CREDENTIALS:
+        USERNAME = CREDENTIALS.get('identifier')
+        PASSWORD = CREDENTIALS.get('password')
+
+    BEARER = None
+    TOKEN = demisto.params().get('token')
+    VERIFY_SSL = not demisto.params().get('tls_enforce', False)
+
+    BASE_URL = get_server_url()
+    SERVER_URL = BASE_URL  # + '/v1'
+
+    DEFAULT_STATUS_CODES = {999}
+
+    GROUP_IDS = demisto.params().get('group_ids', None)
+    if GROUP_IDS:
+        GROUP_IDS = GROUP_IDS.strip()
+
+    PROTECTION_KEY = demisto.params().get('protection_key', None)
+    PROTECTION_MODE = demisto.params().get('protection_mode', None)
+
+
+    ''' MAIN FUNCTION '''
+
+
+    def main() -> None:
+
+        LOG('Executing command: ' + demisto.command())
+
+        if (USERNAME and PASSWORD) or TOKEN:
+            BEARER = login()
+        elif not (BEARER or TOKEN):
+            return_error('Either an API KEY or App/User credentials must be provided')
+
+        try:
+            if demisto.command() == 'test-module':
+                test_command(demisto.command())
+            if demisto.command() == 'fortanix-test':
+                return_results(test_command(demisto.command()))
+            elif demisto.command() == 'fortanix-list-secrets':
+                return_results(list_secrets_command())
+            elif demisto.command() == 'fortanix-get-secret-metadata':
+                return_results(list_secrets_command())
+            elif demisto.command() == 'fortanix-fetch-secret':
+                return_results(fetch_secret_command())
+            elif demisto.command() == 'fortanix-new-secret':
+                return_results(import_secret_command(False))
+            elif demisto.command() == 'fortanix-rotate-secret':
+                return_results(import_secret_command(True))
+            elif demisto.command() == 'fortanix-delete-secret':
+                return_results(delete_secret_command())
+            elif demisto.command() == 'fortanix-invoke-plugin':
+                return_results(invoke_plugin_command())
+            elif demisto.command() == 'fortanix-encrypt':
+                return_results(encrypt_command())
+            elif demisto.command() == 'fortanix-decrypt':
+                return_results(decrypt_command())
+
+        except Exception as e:
+            return_error(f'Failed to execute {demisto.command()} command.\nError:\n{str(e)}')
+
+
+    ''' ENTRY POINT '''
+
+
+    if __name__ in ('__main__', '__builtin__', 'builtins'):
+        main()
+
+    register_module_line('Fortanix DSM', 'end', __line__())
+  type: python
+  commands:
+  - name: fortanix-test
+    arguments: []
+    outputs:
+    - contextPath: Fortanix.DSM.version
+      description: Server version
+    - contextPath: Fortanix.DSM.api_version
+      description: API  version
+    - contextPath: Fortanix.DSM.mode
+      description: Server mode
+    description: Test the Fortanix DSM integration server connection
+  - name: fortanix-list-secrets
+    arguments:
+    - name: group_id
+      description: Group UUID to list secrets from (optional, overrides integration
+        settings)
+    - name: state
+      auto: PREDEFINED
+      predefined:
+      - enabled
+      - disabled
+      - preactive
+      - active
+      - deactivated
+      - compromised
+      - deleted
+      - destroyed
+      description: Current state of the secret (optional, default show all except
+        deleted or destroyed)
+    - name: page
+      description: Page offset to return (optional, 100 results at a time)
+    outputs:
+    - contextPath: Fortanix.Secret.Name
+      description: Secret Name
+      type: string
+    - contextPath: Fortanix.Secret.ID
+      description: Secret ID (Key ID or kid)
+      type: string
+    - contextPath: Fortanix.Secret.Group
+      description: Group ID
+    description: List secrets from one or more specified group(s)
+  - name: fortanix-get-secret-metadata
+    arguments:
+    - name: name
+      description: Name of the secret (mandatory, unless kid is specified)
+    - name: kid
+      description: Secret UUID (optional, unless name is unspecified)
+    outputs:
+    - contextPath: Fortanix.Secret
+      description: Secret metadata, if successful
+    description: Get the secret metadata without exposing its value
+  - name: fortanix-fetch-secret
+    arguments:
+    - name: kid
+      required: true
+      description: Secret UUID (mandatory)
+    outputs:
+    - contextPath: Fortanix.Secret.Value
+      description: Sensitive value of the secret
+    description: Retrieve the secret value
+  - name: fortanix-new-secret
+    arguments:
+    - name: name
+      description: Name of the secret (mandatory)
+    - name: value
+      required: true
+      description: Sensitive value of the secret (mandatory)
+    - name: group_id
+      description: Group UUID to import the secret into (optional)
+    - name: metadata
+      description: List of key-value pairs (optional)
+      type: keyValue
+    outputs:
+    - contextPath: Fortanix.Secret
+      description: Secret metadata, if successful
+    description: Import a new secret
+  - name: fortanix-rotate-secret
+    arguments:
+    - name: name
+      required: true
+      description: Name of the secret (mandatory)
+    - name: value
+      required: true
+      description: Sensitive value of the secret (mandatory)
+    - name: metadata
+      description: List of key-value pairs (optional)
+      type: keyValue
+    outputs:
+    - contextPath: Fortanix.Secret
+      description: Secret metadata, if successful
+    description: Update an existing secret, which will be rotated
+  - name: fortanix-delete-secret
+    arguments:
+    - name: kid
+      description: Secret UUID (mandatory)
+    outputs:
+    - contextPath: Fortanix.Secret.Result
+      description: Deletion status
+    description: Delete the secret
+  - name: fortanix-invoke-plugin
+    arguments:
+    - name: pid
+      required: true
+      description: Plugin UUID (mandatory)
+    - name: input
+      description: Arbitrary user input based on the plugin (optional)
+      type: keyValue
+    outputs:
+    - contextPath: Fortanix.Plugin.Output
+      description: Plugin invocation output
+    description: Invoke a Fortanix Plugin that is executed in a Confidential Computing
+      enclave
+  - name: fortanix-encrypt
+    arguments:
+    - name: data
+      required: true
+      description: User data (mandatory)
+    - name: key
+      description: Key name used for protection (optional, overrides configured)
+    - name: mode
+      auto: PREDEFINED
+      predefined:
+      - FPE
+      - GCM
+      - CBC
+      description: Encryption mode (optional, overrides configured))
+    outputs:
+    - contextPath: Fortanix.Data.Cipher
+      description: Encryption output
+    description: Protects data using key configured in Fortanix DSM
+  - name: fortanix-decrypt
+    arguments:
+    - name: cipher
+      required: true
+      description: Protected ciphertext (mandatory)
+    - name: kid
+      description: Key UUID for decryption (optional, overrides configured)
+    - name: mode
+      auto: PREDEFINED
+      predefined:
+      - FPE
+      - GCM
+      - CBC
+      description: Decryption mode (optional, overrides configured))
+    - name: iv
+      description: Nonce or initialization vector (if any)
+    outputs:
+    - contextPath: Fortanix.Data.Plain
+      description: Decryption output
+    description: Reveal data using key configured in Fortanix DSM
+  dockerimage: demisto/python3:3.10.8.36650
+  runonce: true
+  subtype: python3

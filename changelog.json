@@ -1,0 +1,7 @@
+{
+    "1.0.0": {
+        "releaseNotes": "Manage Secrets and Protect Confidential Data using Fortanix Data Security Manager",
+        "displayName": "Fortanix_DSM_1.0.0000",
+        "released": "2022-10-31"
+    }
+}

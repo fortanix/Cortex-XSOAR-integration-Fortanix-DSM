@@ -1,0 +1,89 @@
+{
+    "name": "Fortanix DSM",
+    "id": "Fortanix DSM",
+    "description": "Manage Secrets and Protect Confidential Data using Fortanix Data Security Manager",
+    "created": "2022-10-31T12:00:00Z",
+    "updated": "2022-10-31T12:00:00Z",
+    "legacy": true,
+    "support": "fortanix",
+    "supportDetails": {
+        "url": "https://support.fortanix.com/"
+    },
+    "eulaLink": "https://github.com/fortanix/Cortex-XSOAR-integration-Fortanix-DSM/blob/main/LICENSE",
+    "author": "Fortanix",
+    "price": 0,
+    "serverMinVersion": "6.6.0",
+    "currentVersion": "1.0.0",
+    "tags": [],
+    "categories": [
+        "Authentication",
+        "Utility"
+    ],
+    "contentItems": {
+        "integration": [
+            {
+                "id": "Fortanix DSM",
+                "name": "Fortanix DSM",
+                "description": "Manage Secrets and Protect Confidential Data using Fortanix Data Security Manager",
+                "category": "Authentication",
+                "commands": [
+                    {
+                      "name": "fortanix-test",
+                       "description": "Test the Fortanix DSM integration server connection"
+                    },
+                    {
+                      "name": "fortanix-list-secrets",
+                       "description": "List secrets from one or more specified group(s)"
+                    },
+                    {
+                      "name": "fortanix-get-secret-metadata",
+                       "description": "Get the secret metadata without exposing its value"
+                    },
+                    {
+                      "name": "fortanix-fetch-secret",
+                       "description": "Retrieve the secret value"
+                    },
+                    {
+                      "name": "fortanix-new-secret",
+                       "description": "Import a new secret"
+                    },
+                    {
+                      "name": "fortanix-rotate-secret",
+                       "description": "Update an existing secret, which will be rotated"
+                    },
+                    {
+                      "name": "fortanix-delete-secret",
+                       "description": "Invoke a Fortanix Plugin that is executed in a Confidential Computing enclave"
+                    },
+                    {
+                      "name": "fortanix-encrypt",
+                       "description": "Protects data using key configured in Fortanix DSM"
+                    },
+                    {
+                      "name": "fortanix-decrypt",
+                       "description": "Reveal data using key configured in Fortanix DSM"
+                    }
+                ]
+            }
+        ]
+    },
+    "integrations": [
+        {
+            "name": "Fortanix DSM"
+        }
+    ],
+    "useCases": ["Secrets Management", "Cryptography", "HSM key management", "Secure Code Execution"],
+    "keywords": ["hsm", "secrets", "keymanagement", "fips"],
+    "dependencies": {
+        "Base": {
+            "mandatory": true,
+            "minVersion": "6.6.0",
+            "author": "Cortex XSOAR",
+            "name": "Base",
+            "certification": "certified"
+        }
+    },
+    "videos": [
+        "https://github.com/fortanix/Cortex-XSOAR-integration-Fortanix-DSM/blob/test/docs/demo.mp4"
+    ]
+}
